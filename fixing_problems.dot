@@ -1,0 +1,71 @@
+digraph { 
+node [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+edge [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+ problemExists [shape=box, style=rounded, color=blue, label="is there a problem?", ]
+problemExists -> fixIt [label="oui"]; problemExists -> inventIt [label="non"]
+
+fixIt [shape=box, style=rounded, color=blue, label="can you fix it?", ]
+fixIt -> happyEnd [label="oui"]; fixIt -> wayOut [label="non"]
+happyEnd [shape=box, label="then why are you wasting
+Your time reading this chart?
+go fix it!", ]
+happyEnd -> problemExists [label="then",]
+
+wayOut [shape=box, style=rounded, color=blue, label="what's your job?", ]
+wayOut -> blameSysop [label="a manager",]
+wayOut -> blameManager [label="a system administrator",]
+blameSysop [shape=box, label="blame your sysop team
+for incompetence", ]
+blameSysop -> fixIt [label="then",] 
+
+blameManager [shape=box, label="blame your management
+to not did the investments
+you ask (including your obscene duty prime)", ]
+blameManager -> fixIt [label="then",]
+
+inventIt [shape=box, style=rounded, color=blue, label="what's your job?", ]
+inventIt -> setupMeeting [label="a manager",]
+inventIt -> timeToMonitor [label="a system administrator",]
+
+timeToMonitor [shape=box, label="ruin your network performance using node.js to run some probes", ]
+timeToMonitor -> problemExists [label="time passes",]
+
+setupMeeting [shape=box, label="setup a meeting and go inovate", ]
+setupMeeting -> beBrilliant [label="at the end of the meeting",]
+
+beBrilliant [shape=box, style=rounded, color=blue, label="is there a problem now?", ]
+beBrilliant -> setupTaskForce [label="oui"]; beBrilliant -> setupTaskForce [label="non"]
+
+setupTaskForce [shape=box, style=rounded, color=blue, label="does a Task Force exists?", ]
+setupTaskForce -> spotManager [label="oui"]; setupTaskForce -> createTaskForce [label="non"]
+createTaskForce [shape=box, label="create a Task Force
+with people who already had
+too much work to do
+fixing the problems", ]
+createTaskForce -> spotManager [label="then",]
+
+spotManager [shape=box, style=rounded, color=blue, label="do you know someone currently useless to mangage the TF?", ]
+spotManager -> promoteManager [label="yes",] 
+
+promoteManager [shape=box, label="promote him as TF leader and let those experts work", ]
+promoteManager -> milestoneMeeting [label="milestone meeting",] 
+
+milestoneMeeting [shape=box, style=rounded, color=blue, label="did it changed something?", ]
+milestoneMeeting -> coverShit [label="NO",]
+
+coverShit [shape=box, style=rounded, color=blue, label="can you hide the hole shit?", ]
+coverShit -> primeTime [label="oui"]; coverShit -> pleaseBitch [label="non"]
+
+primeTime [shape=box, label="give everyone a prime and ask the
+sysop to make all the traces disapear", ]
+
+pleaseBitch [shape=box, label="it's not your fault and you know it:
+fire some sysops and write a memo
+about the failure of the middle management
+then go inovate to have something shiny
+to cell to the board
+and move on!", ]
+pleaseBitch -> setupTaskForce [label="",]
+
+}
+

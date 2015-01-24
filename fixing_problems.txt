@@ -1,0 +1,68 @@
+ASK(problemExists,is there a problem?)
+YN(fixIt,inventIt)
+
+ASK(fixIt,can you fix it?)
+YN(happyEnd,wayOut)
+PROC(happyEnd,then why are you wasting
+Your time reading this chart?
+go fix it!)
+WHEN(then,problemExists)
+
+ASK(wayOut,what's your job?)
+WHEN(a manager,blameSysop)
+WHEN(a system administrator,blameManager)
+PROC(blameSysop,blame your sysop team
+for incompetence)
+WHEN(then,fixIt) 
+
+PROC(blameManager,blame your management
+to not did the investments
+you ask {{(including your obscene duty prime)}})
+WHEN(then,fixIt)
+
+ASK(inventIt,what's your job?)
+WHEN(a manager,setupMeeting)
+WHEN(a system administrator,timeToMonitor)
+
+PROC(timeToMonitor,ruin your network performance using node.js to run some probes)
+WHEN(time passes,problemExists)
+
+PROC(setupMeeting,setup a meeting and go inovate)
+WHEN(at the end of the meeting,beBrilliant)
+
+ASK(beBrilliant,is there a problem now?)
+YN(setupTaskForce,setupTaskForce)
+
+ASK(setupTaskForce,does a Task Force exists?)
+YN(spotManager,createTaskForce)
+PROC(createTaskForce,create a Task Force
+with people who already had
+too much work to do
+fixing the problems)
+WHEN(then,spotManager)
+
+ASK(spotManager,do you know someone currently useless to mangage the TF?)
+WHEN(yes,promoteManager) 
+
+PROC(promoteManager,promote him as TF leader and let those experts work)
+WHEN(milestone meeting,milestoneMeeting) 
+
+ASK(milestoneMeeting,did it changed something?)
+WHEN(NO,coverShit)
+
+ASK(coverShit,can you hide the hole shit?)
+YN(primeTime,pleaseBitch)
+
+PROC(primeTime,give everyone a prime and ask the
+sysop to make all the traces disapear)
+
+PROC(pleaseBitch,it's not your fault and you know it:
+fire some sysops and write a memo
+about the failure of the middle management
+then go inovate to have something shiny
+to cell to the board
+and move on!)
+WHEN(,setupTaskForce)
+
+THATSALLFOLKS
+

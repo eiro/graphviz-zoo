@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>fl4chart</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<header>
+<h1 class="title">fl4chart</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#frankly-...">Frankly ...</a></li>
+<li><a href="#what-is-a-flow-chart">what is a flow chart?</a></li>
+<li><a href="#the-fl4chart-commands">the fl4chart commands</a></li>
+</ul>
+</nav>
+<h1 id="frankly-...">Frankly ...</h1>
+<p>Don't expect the result to have good looking: this is current set of macros are made to do quick but yet reasonable render of flow charts. So fl4chart is good for real time note taking as well as having a gitable form of a flowchart.</p>
+<p>As example, click on the flow chart to read the fl4 source</p>
+<p><a href="should_i_use_fl4chart.txt"><img src="should_i_use_fl4chart.png" title="demo 1" alt="demo1" /></a></p>
+<p><code>fl4</code> (i prononce it like &quot;floor&quot;) is a contraction of <code>m4</code> and <code>flow</code>. It is a very simple set of m4 macros to write flow charts.</p>
+<h1 id="what-is-a-flow-chart">what is a flow chart?</h1>
+<p>what we need to do to get things done is</p>
+<ul>
+<li>asking questions</li>
+<li>describing different anwsers for this question</li>
+<li>take actions based those answer</li>
+</ul>
+<h1 id="the-fl4chart-commands">the fl4chart commands</h1>
+<p>nodes are either a question to ask or a procedure to follow. the following functions creates a node as well as set the source of the next edges.</p>
+<pre><code>ASK(ident,description)
+PROC(ident,description)</code></pre>
+<p>edges are the reason for changing from a node to another, the default source node was set by <code>ASK</code> or <code>PROC</code> and the destination are passed as argument.</p>
+<pre><code>WHEN(description,nextNode) 
+YN(yesNode,noNode)</code></pre>
+</body>
+</html>

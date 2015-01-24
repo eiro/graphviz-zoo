@@ -1,0 +1,37 @@
+digraph { 
+node [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+edge [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+ label="should i use fl4chart ?"
+
+doINeedIt [shape=box, style=rounded, color=blue, label="do i need a flowchart?", ]
+doINeedIt -> iAmNewbie [label="oui"]; doINeedIt -> noYouDont [label="non"]
+noYouDont [shape=box, label="you're loosing your time: go away", ]
+
+iAmNewbie [shape=box, style=rounded, color=blue, label="i have no idea what m4 or graphviz is", ]
+iAmNewbie -> wannaLearn [label="oui"]; iAmNewbie -> unixLover [label="non"]
+unixLover [shape=box, style=rounded, color=blue, label="not only i know m4
+and graphviz
+and make
+and gcc
+and fortran
+an perl
+and bourne shell
+but i also love them!", ]
+unixLover -> haveALook [label="oui"]; unixLover -> wannaLearn [label="non"] 
+
+moveOn [shape=box, label="you should probably
+have a look on something else
+like dia or visio", ]
+haveALook [shape=box, label="so go UTSL and read this example", ] 
+
+wannaLearn [shape=box, style=rounded, color=blue, label="Am i ready to learn those stuff?", ]
+wannaLearn -> goBuyCopy [label="oui"]; wannaLearn -> moveOn [label="non"]
+goBuyCopy [shape=box, label="go to a book store and buy a
+copy of a unix book
+like we did back to the old good days", ]
+goBuyCopy -> iAmNewbie [label="practice hard",]
+
+}
+
+
+
