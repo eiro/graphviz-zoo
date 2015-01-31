@@ -27,4 +27,8 @@ define({{VIZEND}},})
 divert(0)VIZSTART(digraph,{{
 node [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
 edge [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+
+labelloc=top;
+labeljust=left;
+
 }})dnl
