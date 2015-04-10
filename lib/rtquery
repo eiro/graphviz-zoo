@@ -1,0 +1,10 @@
+divert(-1)
+
+those are helpers to easily maintain queries for RT
+
+define(_YOURS_,Owner=__CurrentUser__)
+define(_ACTIVE_,status!=resolved
+    and status!=rejected
+    and status!=stalled)
+define(_YACT_,_YOURS_ and (_ACTIVE_))
+divert(0)dnl
