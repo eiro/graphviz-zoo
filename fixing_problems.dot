@@ -1,6 +1,10 @@
 digraph { 
 node [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
 edge [ fontname = "Bitstream Vera Sans", fontsize = 10 ]
+
+labelloc=top;
+labeljust=left;
+
  problemExists [shape=box, style=rounded, color=blue, label="is there a problem?", ]
 problemExists -> fixIt [label="oui"]; problemExists -> inventIt [label="non"]
 
