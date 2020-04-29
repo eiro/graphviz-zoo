@@ -1,0 +1,54 @@
+graph {
+    // why not ??? :'(
+    // splines=true
+    // edge [splines=true]
+    // node [headport=sw] // or even "hello":sw
+
+    // rankdir=LR
+    // node [shape=record]
+    node [shape=underline]
+
+
+    edge [penwidth=4]
+    // looks ugly. better than nothing
+    // interesting formula:
+    // penwidth=2 * (2 + graph_height - dest_node.depth)
+
+    rankdir=LR
+    overlap=false
+    { root [label="encore que ..."] }
+    --
+    { trucs  [label="chercher des trucs"]
+    ; recul  [label="prendre du recul"]
+    ; choses [label="faire des choses"]
+    }
+    { backchose   [label="chercher des trucs"]
+    ; backlog     [label="prendre du recul"]
+    ; backassable [label="faire des choses"]
+    } -- root
+
+    edge [color=red]
+    choses --
+    { "concrètes"
+    , "vite"
+    }
+
+    // twopi version
+    // less control ???
+    // don't render well ???
+    // ranksep=1.5;
+    // ratio=auto;
+    // { root [label="encore que ..."] } --
+    // { trucs  [label="chercher des trucs"]
+    // ; recul  [label="prendre du recul"]
+    // ; choses [label="faire des choses"]
+    // ; backchose   [label="chercher des trucs"]
+    // ; backlog     [label="prendre du recul"]
+    // ; backassable [label="faire des choses"]
+    // }
+    // choses --
+    // { "concrètes"
+    // ; "vite"
+    // }
+
+}
