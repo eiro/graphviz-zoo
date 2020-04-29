@@ -1,0 +1,10 @@
+// mp: dot -Tsvg -O %
+graph "wow" {
+   //rankdir=TB
+   rankdir=LR
+   rank=same
+   node [shape=folder]
+   "/"  -- { home, etc, usr; proc, dev [color=red] }
+   usr  -- { share, bin, lib }
+   home -- { mc, jean, k }
+}
